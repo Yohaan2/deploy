@@ -8,7 +8,6 @@ import Detail from './Components/Detail/Detail';
 import { useDispatch } from 'react-redux';
 import { searchId, allRecipe } from './Components/Redux/actions';
 import Form from './Components/Form/Form';
-import axios from 'axios';
 axios.defaults.baseURL = 'deploy-production-9dc3.up.railway.app';
 
 function App() {
