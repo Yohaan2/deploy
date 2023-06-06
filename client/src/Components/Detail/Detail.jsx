@@ -13,7 +13,7 @@ const Detail = () => {
 		async function fethData() {
 			try {
 				setLoading(true);
-				const request = await axios.get(`http://localhost:3001/recipe/${id}`);
+				const request = await axios.get(`/recipe/${id}`);
 				const { data } = request;
 				setRecipe(data);
 			} catch (error) {

@@ -8,6 +8,8 @@ import Detail from './Components/Detail/Detail';
 import { useDispatch } from 'react-redux';
 import { searchId, allRecipe } from './Components/Redux/actions';
 import Form from './Components/Form/Form';
+import axios from 'axios';
+axios.defaults.baseURL = 'http://localhost:3001/';
 
 function App() {
 	//const [recipe, setRecipe] = useState();
@@ -22,7 +24,7 @@ function App() {
 	const home = async () => {
 		try {
 			setLoading(true);
-			const request = await axios.get('http://localhost:3001/allRecipe');
+			const request = await axios.get('/allRecipe');
 			const { data } = request;
 
 			dispatch(allRecipe(data));
@@ -40,7 +42,7 @@ function App() {
 
 	const onSearch = async (name, setName) => {
 		if (name) {
-			const request = await axios.get(`http://localhost:3001/recipe/name?name=${name}`);
+			const request = await axios.get(`/recipe/name?name=${name}`);
 			const { data } = request;
 			dispatch(searchId(data));
 			setName('');

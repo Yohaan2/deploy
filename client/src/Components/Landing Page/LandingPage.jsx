@@ -10,7 +10,7 @@ const LandingPage = ({ home, loading }) => {
 
 	useEffect(() => {
 		async function fetchDiets() {
-			const request = await axios.get('http://localhost:3001/diets');
+			const request = await axios.get('/diets');
 			const { data } = request;
 			dispatch(allDiets(data));
 		}

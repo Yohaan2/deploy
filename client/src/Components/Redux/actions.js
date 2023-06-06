@@ -37,7 +37,7 @@ export const filterCards = (diet) => {
 export const postRecipe = (recipe) => {
 	return async (dispatch) => {
 		try {
-			const request = await axios.post('http://localhost:3001/recipe', recipe);
+			const request = await axios.post('/recipe', recipe);
 			const { data } = request;
 			return dispatch({
 				type: types.POST,

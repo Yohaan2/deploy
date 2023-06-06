@@ -1,4 +1,4 @@
-import { orderCards, filterCards, allRecipe, typeRecipe } from '../Redux/actions';
+import { typeRecipe } from '../Redux/actions';
 
 const handleTypeRecipe = (event, dispacth) => {
 	dispacth(typeRecipe(event));
